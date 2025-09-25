@@ -1,0 +1,34 @@
+@import "bootstrap"
+
+body
+    @extend .container
+
+header
+    @extend .pt-5, .pb-3
+
+    h1
+        @extend .display-5
+
+    p
+        @extend .lead
+
+nav, main, footer
+    @extend .pb-5
+
+form
+    @extend .col-sm-8, .col-md-6, .col-lg-4
+
+    >div
+        @extend .py-2
+
+    label
+        @extend .form-label
+
+    input
+        @extend .form-control
+
+    button[type="submit"]
+        @extend .btn, .btn-primary
+
+    button:not(button[type="submit"])
+        @extend .btn, .btn-secondary
