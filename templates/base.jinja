@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
+
+<head>
+    <title>Mythologie Grecque</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/image/icon.png" />
+    <link rel="stylesheet" href="/static/css/styles.css" />
+</head>
+
+<body>
+    <header class="row justify-between">
+        <h1>Mythologie Grecque</h1>
+        <img src="/image/logo.jpg" alt="Icone de la mythologie grecque" />
+    </header>
+     <nav aria-label="Navigation" class="container navbar navbar-expand-md bg-body-tertiary sticky-top">
+                <div class="navbar-nav">
+                    <a class="text-primary fw-bold nav-link" href="index.html">Accueil</a>
+                    <a class="text-primary fw-bold nav-link" href="personnage.html">Service particulier</a>
+                    <a class="text-primary fw-bold nav-link" href="descriptionPersonnage.html">Liste des services</a>
+                </div>
+    </nav>
+    <main>
+        {% block contenu %}
+        {% endblock %}
+    </main>
+</body>
+
+</html>
