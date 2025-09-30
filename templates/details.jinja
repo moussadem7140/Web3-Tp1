@@ -1,0 +1,20 @@
+{% extends "base.jinja" %}
+{% block contenu %}
+<h2 class="text-center my-5">Détails d'un service en particulier</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="/static/logo.jpg" class="img-fluid" alt="Image du service particulier">
+        </div>
+        <div class="col-md-6">
+            <h3>{{ service['titre'] }}</h3>
+            <p><strong>Catégorie:</strong> {{ service['nom_categorie'] }}</p>
+            <p><strong>Description:</strong> {{ service['description'] }}</p>
+            <p><strong>Localisation:</strong> {{ service['localisation'] }}</p>
+            <p><strong>Coût:</strong> {{ service['cout'] }} $</p>
+            <p><strong>Date de création:</strong> {{ service['date_creation'] }}</p>
+            <p><strong>Statut:</strong> {% if service['actif'] %} Actif {% else %} Inactif {% endif %}</p>
+            <a href="/ajoutModif?action={{service['titre']}}&id_service={{service['id_service']}}" class="btn btn-primary">Modifier le service</a>
+        </div>
+    </div>
+    {% endblock %}

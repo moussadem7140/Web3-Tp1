@@ -1,0 +1,49 @@
+{% extends "base.jinja" %}
+{% block contenu %}
+{%if action== "ajout"%}
+    <h2 class="text-center my-5">Ajouter un service particulier</h2>
+    <form method="post" action="/validation?action=ajout" class="container">
+{%else%}
+    <h2 class="text-center my-5">Modifier le service {{action}}</h2>
+    <form method="post" action="/validation?action={{action}}&id_service={{id_service}}" class="container">
+{% endif %}
+        <div class="mb-3">
+            <label for="titre" class="form-label">Titre du service</label>
+            <input type="text" class="form-control {{class_titre}}" id="titre" name="titre"/>
+        <div class="invalid-feedback">Le titre n'est pas valide</div>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description du service</label>
+            <textarea class="form-control {{class_description}}" id="description" name="description" rows="3" ></textarea>
+            <div class="invalid-feedback">La description n'est pas valide</div>
+        </div>
+        <div class="mb-3">
+            <label for="localisation" class="form-label">Localisation</label>
+            <input type="text" class="form-control {{class_localisation}}" id="localisation" name="localisation"/>
+            <div class="invalid-feedback">La localisation n'est pas valide</div>
+        </div>
+        <div class="mb-3">
+            <label for="categorie" class="form-label classe_categorie">Catégorie</label>
+            <select class="form-select" id="categorie" name="categorie" >
+                <option value="">Choisir une catégorie</option>
+                {% for categorie in categories %}
+                <option value="{{ categorie['id_categorie'] }}">{{ categorie['nom_categorie'] }}</option>
+                {% endfor %}
+            </select>
+            <div class="invalid-feedback">La catégorie n'est pas valide</div>
+        </div>
+        <div class="mb-3">
+            <label for="cout" class="form-label">Coût</label>
+            <input type="number" class="form-control class_cout" id="cout" name="cout" value="0.00"/>
+            <div class="invalid-feedback">Le coût n'est pas valide</div>
+        </div>
+            <label for="status">Actif</label>
+            <input type="checkbox" id="status" name="status" checked />
+        <div class="mb-3">
+            <label for="photo" class="form-label">Photo</label>
+            <input type="text" class="form-control class_photo" id="photo" name="photo" />
+            <div class="invalid-feedback">Le nom de la photo n'est pas valide</div>
+        </div>
+        <button type="submit" class="btn btn-primary">Confirmer</button>
+    </form>
+{% endblock %}

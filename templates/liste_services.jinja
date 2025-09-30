@@ -1,0 +1,21 @@
+{% extends "base.jinja" %}
+{% block contenu %}
+    <h2 class="text-center my-5">Liste services particuliers</h2>
+    <div class="container">
+      <div class="row">
+        {% for service in liste %}
+        <div class="col-md-2 mb-4">
+          <div class="card" style="width: 18rem;">
+            <img src="/static/logo.jpg" class="card-img-top" alt="image d'un service particulier">
+            <div class="card-body">
+              <h5 class="card-title">{{ service["titre"] }}</h5>
+              <p class="card-text">Catégorie: {{ service["nom_categorie"] }}</p>
+              <p class="card-text">Localisation: {{ service["localisation"] }}</p>
+              <a href="/details?{{ service['id_service'] }}" class="btn btn-primary">Détails du service</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+{% endblock %}

@@ -461,11 +461,6 @@ legend + * {
   padding: 0;
 }
 
-::-webkit-file-upload-button {
-  font: inherit;
-  -webkit-appearance: button;
-}
-
 ::file-selector-button {
   font: inherit;
   -webkit-appearance: button;
@@ -492,7 +487,7 @@ progress {
   display: none !important;
 }
 
-.lead, header p {
+.lead {
   font-size: 1.25rem;
   font-weight: 300;
 }
@@ -541,14 +536,14 @@ progress {
     font-size: 3.5rem;
   }
 }
-.display-5, header h1 {
+.display-5 {
   font-size: calc(1.425rem + 2.1vw);
   font-weight: 300;
   line-height: 1.2;
 }
 
 @media (min-width: 1200px) {
-  .display-5, header h1 {
+  .display-5 {
     font-size: 3rem;
   }
 }
@@ -606,7 +601,7 @@ progress {
   content: "— ";
 }
 
-.img-fluid {
+.img-fluid, img {
   max-width: 100%;
   height: auto;
 }
@@ -634,7 +629,7 @@ progress {
   color: #6c757d;
 }
 
-.container, body,
+.container,
 .container-fluid,
 .container-xxl,
 .container-xl,
@@ -651,27 +646,27 @@ progress {
 }
 
 @media (min-width: 576px) {
-  .container-sm, .container, body {
+  .container-sm, .container {
     max-width: 540px;
   }
 }
 @media (min-width: 768px) {
-  .container-md, .container-sm, .container, body {
+  .container-md, .container-sm, .container {
     max-width: 720px;
   }
 }
 @media (min-width: 992px) {
-  .container-lg, .container-md, .container-sm, .container, body {
+  .container-lg, .container-md, .container-sm, .container {
     max-width: 960px;
   }
 }
 @media (min-width: 1200px) {
-  .container-xl, .container-lg, .container-md, .container-sm, .container, body {
+  .container-xl, .container-lg, .container-md, .container-sm, .container {
     max-width: 1140px;
   }
 }
 @media (min-width: 1400px) {
-  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container, body {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
     max-width: 1320px;
   }
 }
@@ -966,7 +961,7 @@ progress {
     flex: 0 0 auto;
     width: 58.33333333%;
   }
-  .col-sm-8, form {
+  .col-sm-8 {
     flex: 0 0 auto;
     width: 66.66666667%;
   }
@@ -1127,7 +1122,7 @@ progress {
     flex: 0 0 auto;
     width: 41.66666667%;
   }
-  .col-md-6, form {
+  .col-md-6 {
     flex: 0 0 auto;
     width: 50%;
   }
@@ -1288,7 +1283,7 @@ progress {
     flex: 0 0 auto;
     width: 25%;
   }
-  .col-lg-4, form {
+  .col-lg-4 {
     flex: 0 0 auto;
     width: 33.33333333%;
   }
@@ -1975,7 +1970,7 @@ progress {
     -webkit-overflow-scrolling: touch;
   }
 }
-.form-label, form label {
+.form-label {
   margin-bottom: 0.5rem;
 }
 
@@ -2005,7 +2000,7 @@ progress {
   color: #6c757d;
 }
 
-.form-control, form input {
+.form-control {
   display: block;
   width: 100%;
   padding: 0.375rem 0.75rem;
@@ -2024,19 +2019,19 @@ progress {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .form-control, form input {
+  .form-control {
     transition: none;
   }
 }
-.form-control[type=file], form input[type=file] {
+.form-control[type=file] {
   overflow: hidden;
 }
 
-.form-control[type=file]:not(:disabled):not([readonly]), form input[type=file]:not(:disabled):not([readonly]) {
+.form-control[type=file]:not(:disabled):not([readonly]) {
   cursor: pointer;
 }
 
-.form-control:focus, form input:focus {
+.form-control:focus {
   color: #212529;
   background-color: #fff;
   border-color: #86b7fe;
@@ -2044,46 +2039,28 @@ progress {
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 
-.form-control::-webkit-date-and-time-value, form input::-webkit-date-and-time-value {
+.form-control::-webkit-date-and-time-value {
   height: 1.5em;
 }
 
-.form-control::-moz-placeholder, form input::-moz-placeholder {
+.form-control::-moz-placeholder {
   color: #6c757d;
   opacity: 1;
 }
 
-.form-control::placeholder, form input::placeholder {
+.form-control::placeholder {
   color: #6c757d;
   opacity: 1;
 }
 
-.form-control:disabled, form input:disabled {
+.form-control:disabled {
   background-color: #e9ecef;
   opacity: 1;
 }
 
-.form-control::-webkit-file-upload-button, form input::-webkit-file-upload-button {
+.form-control::file-selector-button {
   padding: 0.375rem 0.75rem;
   margin: -0.375rem -0.75rem;
-  -webkit-margin-end: 0.75rem;
-  margin-inline-end: 0.75rem;
-  color: #212529;
-  background-color: #e9ecef;
-  pointer-events: none;
-  border-color: inherit;
-  border-style: solid;
-  border-width: 0;
-  border-inline-end-width: 1px;
-  border-radius: 0;
-  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-
-.form-control::file-selector-button, form input::file-selector-button {
-  padding: 0.375rem 0.75rem;
-  margin: -0.375rem -0.75rem;
-  -webkit-margin-end: 0.75rem;
   margin-inline-end: 0.75rem;
   color: #212529;
   background-color: #e9ecef;
@@ -2097,19 +2074,12 @@ progress {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .form-control::-webkit-file-upload-button, form input::-webkit-file-upload-button {
-    -webkit-transition: none;
+  .form-control::file-selector-button {
     transition: none;
   }
-  .form-control::file-selector-button, form input::file-selector-button {
-    transition: none;
-  }
-}
-.form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button, form input:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
-  background-color: #dde0e3;
 }
 
-.form-control:hover:not(:disabled):not([readonly])::file-selector-button, form input:hover:not(:disabled):not([readonly])::file-selector-button {
+.form-control:hover:not(:disabled):not([readonly])::file-selector-button {
   background-color: #dde0e3;
 }
 
@@ -2141,17 +2111,9 @@ progress {
   border-radius: 0.25rem;
 }
 
-.form-control-sm::-webkit-file-upload-button {
-  padding: 0.25rem 0.5rem;
-  margin: -0.25rem -0.5rem;
-  -webkit-margin-end: 0.5rem;
-  margin-inline-end: 0.5rem;
-}
-
 .form-control-sm::file-selector-button {
   padding: 0.25rem 0.5rem;
   margin: -0.25rem -0.5rem;
-  -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
 }
 
@@ -2162,17 +2124,9 @@ progress {
   border-radius: 0.5rem;
 }
 
-.form-control-lg::-webkit-file-upload-button {
-  padding: 0.5rem 1rem;
-  margin: -0.5rem -1rem;
-  -webkit-margin-end: 1rem;
-  margin-inline-end: 1rem;
-}
-
 .form-control-lg::file-selector-button {
   padding: 0.5rem 1rem;
   margin: -0.5rem -1rem;
-  -webkit-margin-end: 1rem;
   margin-inline-end: 1rem;
 }
 
@@ -2316,7 +2270,6 @@ textarea.form-control-lg {
   -moz-appearance: none;
   appearance: none;
   -webkit-print-color-adjust: exact;
-  color-adjust: exact;
   print-color-adjust: exact;
 }
 
@@ -2416,7 +2369,7 @@ textarea.form-control-lg {
   pointer-events: none;
 }
 
-.btn-check[disabled] + .btn, form .btn-check[disabled] + button:not(button[type=submit]), form .btn-check[disabled] + button[type=submit], .btn-check:disabled + .btn, form .btn-check:disabled + button:not(button[type=submit]), form .btn-check:disabled + button[type=submit] {
+.btn-check[disabled] + .btn, .btn-check:disabled + .btn {
   pointer-events: none;
   filter: none;
   opacity: 0.65;
@@ -2529,7 +2482,7 @@ textarea.form-control-lg {
   position: relative;
 }
 
-.form-floating > .form-control, form .form-floating > input,
+.form-floating > .form-control,
 .form-floating > .form-control-plaintext,
 .form-floating > .form-select {
   height: calc(3.5rem + 2px);
@@ -2558,33 +2511,38 @@ textarea.form-control-lg {
     transition: none;
   }
 }
-.form-floating > .form-control, form .form-floating > input,
+.form-floating > .form-control,
 .form-floating > .form-control-plaintext {
   padding: 1rem 0.75rem;
 }
 
-.form-floating > .form-control::-moz-placeholder, form .form-floating > input::-moz-placeholder, .form-floating > .form-control-plaintext::-moz-placeholder {
+.form-floating > .form-control::-moz-placeholder, .form-floating > .form-control-plaintext::-moz-placeholder {
   color: transparent;
 }
 
-.form-floating > .form-control::placeholder, form .form-floating > input::placeholder,
+.form-floating > .form-control::placeholder,
 .form-floating > .form-control-plaintext::placeholder {
   color: transparent;
 }
 
-.form-floating > .form-control:not(:-moz-placeholder-shown), form .form-floating > input:not(:-moz-placeholder-shown), .form-floating > .form-control-plaintext:not(:-moz-placeholder-shown) {
+.form-floating > .form-control:not(:-moz-placeholder-shown), .form-floating > .form-control-plaintext:not(:-moz-placeholder-shown) {
   padding-top: 1.625rem;
   padding-bottom: 0.625rem;
 }
 
-.form-floating > .form-control:focus, form .form-floating > input:focus, .form-floating > .form-control:not(:placeholder-shown), form .form-floating > input:not(:placeholder-shown),
+.form-floating > .form-control:not(:-moz-placeholder), .form-floating > .form-control-plaintext:not(:-moz-placeholder) {
+  padding-top: 1.625rem;
+  padding-bottom: 0.625rem;
+}
+
+.form-floating > .form-control:focus, .form-floating > .form-control:not(:placeholder-shown),
 .form-floating > .form-control-plaintext:focus,
 .form-floating > .form-control-plaintext:not(:placeholder-shown) {
   padding-top: 1.625rem;
   padding-bottom: 0.625rem;
 }
 
-.form-floating > .form-control:-webkit-autofill, form .form-floating > input:-webkit-autofill,
+.form-floating > .form-control:-webkit-autofill,
 .form-floating > .form-control-plaintext:-webkit-autofill {
   padding-top: 1.625rem;
   padding-bottom: 0.625rem;
@@ -2595,21 +2553,25 @@ textarea.form-control-lg {
   padding-bottom: 0.625rem;
 }
 
-.form-floating > .form-control:not(:-moz-placeholder-shown) ~ label, form .form-floating > input:not(:-moz-placeholder-shown) ~ label {
+.form-floating > .form-control:not(:-moz-placeholder-shown) ~ label {
   opacity: 0.65;
   transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
 }
 
-.form-floating > .form-control:focus ~ label, form .form-floating > input:focus ~ label,
+.form-floating > .form-control:not(:-moz-placeholder) ~ label {
+  opacity: 0.65;
+  transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+}
+
+.form-floating > .form-control:focus ~ label,
 .form-floating > .form-control:not(:placeholder-shown) ~ label,
-form .form-floating > input:not(:placeholder-shown) ~ label,
 .form-floating > .form-control-plaintext ~ label,
 .form-floating > .form-select ~ label {
   opacity: 0.65;
   transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
 }
 
-.form-floating > .form-control:-webkit-autofill ~ label, form .form-floating > input:-webkit-autofill ~ label {
+.form-floating > .form-control:-webkit-autofill ~ label {
   opacity: 0.65;
   transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
 }
@@ -2626,7 +2588,7 @@ form .form-floating > input:not(:placeholder-shown) ~ label,
   width: 100%;
 }
 
-.input-group > .form-control, form .input-group > input,
+.input-group > .form-control,
 .input-group > .form-select,
 .input-group > .form-floating {
   position: relative;
@@ -2635,18 +2597,18 @@ form .form-floating > input:not(:placeholder-shown) ~ label,
   min-width: 0;
 }
 
-.input-group > .form-control:focus, form .input-group > input:focus,
+.input-group > .form-control:focus,
 .input-group > .form-select:focus,
 .input-group > .form-floating:focus-within {
   z-index: 5;
 }
 
-.input-group .btn, .input-group form button:not(button[type=submit]), form .input-group button:not(button[type=submit]), .input-group form button[type=submit], form .input-group button[type=submit] {
+.input-group .btn {
   position: relative;
   z-index: 2;
 }
 
-.input-group .btn:focus, .input-group form button:focus:not(button[type=submit]), form .input-group button:focus:not(button[type=submit]), .input-group form button[type=submit]:focus, form .input-group button[type=submit]:focus {
+.input-group .btn:focus {
   z-index: 5;
 }
 
@@ -2665,23 +2627,19 @@ form .form-floating > input:not(:placeholder-shown) ~ label,
   border-radius: 0.375rem;
 }
 
-.input-group-lg > .form-control, form .input-group-lg > input,
+.input-group-lg > .form-control,
 .input-group-lg > .form-select,
 .input-group-lg > .input-group-text,
-.input-group-lg > .btn,
-form .input-group-lg > button:not(button[type=submit]),
-form .input-group-lg > button[type=submit] {
+.input-group-lg > .btn {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   border-radius: 0.5rem;
 }
 
-.input-group-sm > .form-control, form .input-group-sm > input,
+.input-group-sm > .form-control,
 .input-group-sm > .form-select,
 .input-group-sm > .input-group-text,
-.input-group-sm > .btn,
-form .input-group-sm > button:not(button[type=submit]),
-form .input-group-sm > button[type=submit] {
+.input-group-sm > .btn {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.25rem;
@@ -2695,7 +2653,6 @@ form .input-group-sm > button[type=submit] {
 .input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating),
 .input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n+3),
 .input-group:not(.has-validation) > .form-floating:not(:last-child) > .form-control,
-form .input-group:not(.has-validation) > .form-floating:not(:last-child) > input,
 .input-group:not(.has-validation) > .form-floating:not(:last-child) > .form-select {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
@@ -2704,7 +2661,6 @@ form .input-group:not(.has-validation) > .form-floating:not(:last-child) > input
 .input-group.has-validation > :nth-last-child(n+3):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating),
 .input-group.has-validation > .dropdown-toggle:nth-last-child(n+4),
 .input-group.has-validation > .form-floating:nth-last-child(n+3) > .form-control,
-form .input-group.has-validation > .form-floating:nth-last-child(n+3) > input,
 .input-group.has-validation > .form-floating:nth-last-child(n+3) > .form-select {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
@@ -2716,7 +2672,7 @@ form .input-group.has-validation > .form-floating:nth-last-child(n+3) > input,
   border-bottom-left-radius: 0;
 }
 
-.input-group > .form-floating:not(:first-child) > .form-control, form .input-group > .form-floating:not(:first-child) > input,
+.input-group > .form-floating:not(:first-child) > .form-control,
 .input-group > .form-floating:not(:first-child) > .form-select {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -2751,7 +2707,7 @@ form .input-group.has-validation > .form-floating:nth-last-child(n+3) > input,
   display: block;
 }
 
-.was-validated .form-control:valid, .was-validated form input:valid, form .was-validated input:valid, .form-control.is-valid, form input.is-valid {
+.was-validated .form-control:valid, .form-control.is-valid {
   border-color: #198754;
   padding-right: calc(1.5em + 0.75rem);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
@@ -2760,7 +2716,7 @@ form .input-group.has-validation > .form-floating:nth-last-child(n+3) > input,
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
 
-.was-validated .form-control:valid:focus, .was-validated form input:valid:focus, form .was-validated input:valid:focus, .form-control.is-valid:focus, form input.is-valid:focus {
+.was-validated .form-control:valid:focus, .form-control.is-valid:focus {
   border-color: #198754;
   box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
 }
@@ -2810,7 +2766,7 @@ form .input-group.has-validation > .form-floating:nth-last-child(n+3) > input,
   margin-left: 0.5em;
 }
 
-.was-validated .input-group > .form-control:not(:focus):valid, .was-validated form .input-group > input:not(:focus):valid, form .was-validated .input-group > input:not(:focus):valid, .input-group > .form-control:not(:focus).is-valid, form .input-group > input:not(:focus).is-valid,
+.was-validated .input-group > .form-control:not(:focus):valid, .input-group > .form-control:not(:focus).is-valid,
 .was-validated .input-group > .form-select:not(:focus):valid,
 .input-group > .form-select:not(:focus).is-valid,
 .was-validated .input-group > .form-floating:not(:focus-within):valid,
@@ -2847,7 +2803,7 @@ form .input-group.has-validation > .form-floating:nth-last-child(n+3) > input,
   display: block;
 }
 
-.was-validated .form-control:invalid, .was-validated form input:invalid, form .was-validated input:invalid, .form-control.is-invalid, form input.is-invalid {
+.was-validated .form-control:invalid, .form-control.is-invalid {
   border-color: #dc3545;
   padding-right: calc(1.5em + 0.75rem);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
@@ -2856,7 +2812,7 @@ form .input-group.has-validation > .form-floating:nth-last-child(n+3) > input,
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
 
-.was-validated .form-control:invalid:focus, .was-validated form input:invalid:focus, form .was-validated input:invalid:focus, .form-control.is-invalid:focus, form input.is-invalid:focus {
+.was-validated .form-control:invalid:focus, .form-control.is-invalid:focus {
   border-color: #dc3545;
   box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
 }
@@ -2906,7 +2862,7 @@ form .input-group.has-validation > .form-floating:nth-last-child(n+3) > input,
   margin-left: 0.5em;
 }
 
-.was-validated .input-group > .form-control:not(:focus):invalid, .was-validated form .input-group > input:not(:focus):invalid, form .was-validated .input-group > input:not(:focus):invalid, .input-group > .form-control:not(:focus).is-invalid, form .input-group > input:not(:focus).is-invalid,
+.was-validated .input-group > .form-control:not(:focus):invalid, .input-group > .form-control:not(:focus).is-invalid,
 .was-validated .input-group > .form-select:not(:focus):invalid,
 .input-group > .form-select:not(:focus).is-invalid,
 .was-validated .input-group > .form-floating:not(:focus-within):invalid,
@@ -2914,7 +2870,7 @@ form .input-group.has-validation > .form-floating:nth-last-child(n+3) > input,
   z-index: 4;
 }
 
-.btn, form button:not(button[type=submit]), form button[type=submit] {
+.btn {
   --bs-btn-padding-x: 0.75rem;
   --bs-btn-padding-y: 0.375rem;
   --bs-btn-font-family: ;
@@ -2951,23 +2907,23 @@ form .input-group.has-validation > .form-floating:nth-last-child(n+3) > input,
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .btn, form button:not(button[type=submit]), form button[type=submit] {
+  .btn {
     transition: none;
   }
 }
-.btn:hover, form button:hover:not(button[type=submit]), form button[type=submit]:hover {
+.btn:hover {
   color: var(--bs-btn-hover-color);
   background-color: var(--bs-btn-hover-bg);
   border-color: var(--bs-btn-hover-border-color);
 }
 
-.btn-check + .btn:hover, form .btn-check + button:hover:not(button[type=submit]), form .btn-check + button[type=submit]:hover {
+.btn-check + .btn:hover {
   color: var(--bs-btn-color);
   background-color: var(--bs-btn-bg);
   border-color: var(--bs-btn-border-color);
 }
 
-.btn:focus-visible, form button:focus-visible:not(button[type=submit]), form button[type=submit]:focus-visible {
+.btn:focus-visible {
   color: var(--bs-btn-hover-color);
   background-color: var(--bs-btn-hover-bg);
   border-color: var(--bs-btn-hover-border-color);
@@ -2975,23 +2931,23 @@ form .input-group.has-validation > .form-floating:nth-last-child(n+3) > input,
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
 
-.btn-check:focus-visible + .btn, form .btn-check:focus-visible + button:not(button[type=submit]), form .btn-check:focus-visible + button[type=submit] {
+.btn-check:focus-visible + .btn {
   border-color: var(--bs-btn-hover-border-color);
   outline: 0;
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
 
-.btn-check:checked + .btn, form .btn-check:checked + button:not(button[type=submit]), form .btn-check:checked + button[type=submit], :not(.btn-check) + .btn:active, form :not(.btn-check) + button:active:not(button[type=submit]), form :not(.btn-check) + button[type=submit]:active, .btn:first-child:active, form button:first-child:active:not(button[type=submit]), form button[type=submit]:first-child:active, .btn.active, form button.active:not(button[type=submit]), form button.active[type=submit], .btn.show, form button.show:not(button[type=submit]), form button.show[type=submit] {
+.btn-check:checked + .btn, :not(.btn-check) + .btn:active, .btn:first-child:active, .btn.active, .btn.show {
   color: var(--bs-btn-active-color);
   background-color: var(--bs-btn-active-bg);
   border-color: var(--bs-btn-active-border-color);
 }
 
-.btn-check:checked + .btn:focus-visible, form .btn-check:checked + button:focus-visible:not(button[type=submit]), form .btn-check:checked + button[type=submit]:focus-visible, :not(.btn-check) + .btn:active:focus-visible, form :not(.btn-check) + button:active:focus-visible:not(button[type=submit]), form :not(.btn-check) + button[type=submit]:active:focus-visible, .btn:first-child:active:focus-visible, form button:first-child:active:focus-visible:not(button[type=submit]), form button[type=submit]:first-child:active:focus-visible, .btn.active:focus-visible, form button.active:focus-visible:not(button[type=submit]), form button.active[type=submit]:focus-visible, .btn.show:focus-visible, form button.show:focus-visible:not(button[type=submit]), form button.show[type=submit]:focus-visible {
+.btn-check:checked + .btn:focus-visible, :not(.btn-check) + .btn:active:focus-visible, .btn:first-child:active:focus-visible, .btn.active:focus-visible, .btn.show:focus-visible {
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
 
-.btn:disabled, form button:disabled:not(button[type=submit]), form button[type=submit]:disabled, .btn.disabled, form button.disabled:not(button[type=submit]), form button.disabled[type=submit], fieldset:disabled .btn, fieldset:disabled form button:not(button[type=submit]), form fieldset:disabled button:not(button[type=submit]), fieldset:disabled form button[type=submit], form fieldset:disabled button[type=submit] {
+.btn:disabled, .btn.disabled, fieldset:disabled .btn {
   color: var(--bs-btn-disabled-color);
   pointer-events: none;
   background-color: var(--bs-btn-disabled-bg);
@@ -2999,7 +2955,7 @@ form .input-group.has-validation > .form-floating:nth-last-child(n+3) > input,
   opacity: var(--bs-btn-disabled-opacity);
 }
 
-.btn-primary, form button[type=submit] {
+.btn-primary {
   --bs-btn-color: #fff;
   --bs-btn-bg: #0d6efd;
   --bs-btn-border-color: #0d6efd;
@@ -3016,7 +2972,7 @@ form .input-group.has-validation > .form-floating:nth-last-child(n+3) > input,
   --bs-btn-disabled-border-color: #0d6efd;
 }
 
-.btn-secondary, form button:not(button[type=submit]) {
+.btn-secondary {
   --bs-btn-color: #fff;
   --bs-btn-bg: #6c757d;
   --bs-btn-border-color: #6c757d;
@@ -3295,14 +3251,14 @@ form .input-group.has-validation > .form-floating:nth-last-child(n+3) > input,
   color: var(--bs-btn-hover-color);
 }
 
-.btn-lg, .btn-group-lg > .btn, form .btn-group-lg > button:not(button[type=submit]), form .btn-group-lg > button[type=submit] {
+.btn-lg, .btn-group-lg > .btn {
   --bs-btn-padding-y: 0.5rem;
   --bs-btn-padding-x: 1rem;
   --bs-btn-font-size: 1.25rem;
   --bs-btn-border-radius: 0.5rem;
 }
 
-.btn-sm, .btn-group-sm > .btn, form .btn-group-sm > button:not(button[type=submit]), form .btn-group-sm > button[type=submit] {
+.btn-sm, .btn-group-sm > .btn {
   --bs-btn-padding-y: 0.25rem;
   --bs-btn-padding-x: 0.5rem;
   --bs-btn-font-size: 0.875rem;
@@ -3689,48 +3645,24 @@ form .input-group.has-validation > .form-floating:nth-last-child(n+3) > input,
   vertical-align: middle;
 }
 
-.btn-group > .btn, form .btn-group > button:not(button[type=submit]), form .btn-group > button[type=submit],
-.btn-group-vertical > .btn,
-form .btn-group-vertical > button:not(button[type=submit]),
-form .btn-group-vertical > button[type=submit] {
+.btn-group > .btn,
+.btn-group-vertical > .btn {
   position: relative;
   flex: 1 1 auto;
 }
 
-.btn-group > .btn-check:checked + .btn, form .btn-group > .btn-check:checked + button:not(button[type=submit]), form .btn-group > .btn-check:checked + button[type=submit],
+.btn-group > .btn-check:checked + .btn,
 .btn-group > .btn-check:focus + .btn,
-form .btn-group > .btn-check:focus + button:not(button[type=submit]),
-form .btn-group > .btn-check:focus + button[type=submit],
 .btn-group > .btn:hover,
-form .btn-group > button:hover:not(button[type=submit]),
-form .btn-group > button[type=submit]:hover,
 .btn-group > .btn:focus,
-form .btn-group > button:focus:not(button[type=submit]),
-form .btn-group > button[type=submit]:focus,
 .btn-group > .btn:active,
-form .btn-group > button:active:not(button[type=submit]),
-form .btn-group > button[type=submit]:active,
 .btn-group > .btn.active,
-form .btn-group > button.active:not(button[type=submit]),
-form .btn-group > button.active[type=submit],
 .btn-group-vertical > .btn-check:checked + .btn,
-form .btn-group-vertical > .btn-check:checked + button:not(button[type=submit]),
-form .btn-group-vertical > .btn-check:checked + button[type=submit],
 .btn-group-vertical > .btn-check:focus + .btn,
-form .btn-group-vertical > .btn-check:focus + button:not(button[type=submit]),
-form .btn-group-vertical > .btn-check:focus + button[type=submit],
 .btn-group-vertical > .btn:hover,
-form .btn-group-vertical > button:hover:not(button[type=submit]),
-form .btn-group-vertical > button[type=submit]:hover,
 .btn-group-vertical > .btn:focus,
-form .btn-group-vertical > button:focus:not(button[type=submit]),
-form .btn-group-vertical > button[type=submit]:focus,
 .btn-group-vertical > .btn:active,
-form .btn-group-vertical > button:active:not(button[type=submit]),
-form .btn-group-vertical > button[type=submit]:active,
-.btn-group-vertical > .btn.active,
-form .btn-group-vertical > button.active:not(button[type=submit]),
-form .btn-group-vertical > button.active[type=submit] {
+.btn-group-vertical > .btn.active {
   z-index: 1;
 }
 
@@ -3748,29 +3680,21 @@ form .btn-group-vertical > button.active[type=submit] {
   border-radius: 0.375rem;
 }
 
-.btn-group > :not(.btn-check:first-child) + .btn, form .btn-group > :not(.btn-check:first-child) + button:not(button[type=submit]), form .btn-group > :not(.btn-check:first-child) + button[type=submit],
+.btn-group > :not(.btn-check:first-child) + .btn,
 .btn-group > .btn-group:not(:first-child) {
   margin-left: -1px;
 }
 
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle), form .btn-group > button:not(:last-child):not(.dropdown-toggle):not(button[type=submit]), form .btn-group > button[type=submit]:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn.dropdown-toggle-split:first-child,
-form .btn-group > button.dropdown-toggle-split:first-child:not(button[type=submit]),
-form .btn-group > button.dropdown-toggle-split[type=submit]:first-child,
-.btn-group > .btn-group:not(:last-child) > .btn,
-form .btn-group > .btn-group:not(:last-child) > button:not(button[type=submit]),
-form .btn-group > .btn-group:not(:last-child) > button[type=submit] {
+.btn-group > .btn-group:not(:last-child) > .btn {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.btn-group > .btn:nth-child(n+3), form .btn-group > button:nth-child(n+3):not(button[type=submit]), form .btn-group > button[type=submit]:nth-child(n+3),
+.btn-group > .btn:nth-child(n+3),
 .btn-group > :not(.btn-check) + .btn,
-form .btn-group > :not(.btn-check) + button:not(button[type=submit]),
-form .btn-group > :not(.btn-check) + button[type=submit],
-.btn-group > .btn-group:not(:first-child) > .btn,
-form .btn-group > .btn-group:not(:first-child) > button:not(button[type=submit]),
-form .btn-group > .btn-group:not(:first-child) > button[type=submit] {
+.btn-group > .btn-group:not(:first-child) > .btn {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -3788,12 +3712,12 @@ form .btn-group > .btn-group:not(:first-child) > button[type=submit] {
   margin-right: 0;
 }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, form .btn-group-sm > button:not(button[type=submit]) + .dropdown-toggle-split, form .btn-group-sm > button[type=submit] + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem;
 }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, form .btn-group-lg > button:not(button[type=submit]) + .dropdown-toggle-split, form .btn-group-lg > button[type=submit] + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem;
 }
@@ -3804,28 +3728,24 @@ form .btn-group > .btn-group:not(:first-child) > button[type=submit] {
   justify-content: center;
 }
 
-.btn-group-vertical > .btn, form .btn-group-vertical > button:not(button[type=submit]), form .btn-group-vertical > button[type=submit],
+.btn-group-vertical > .btn,
 .btn-group-vertical > .btn-group {
   width: 100%;
 }
 
-.btn-group-vertical > .btn:not(:first-child), form .btn-group-vertical > button:not(:first-child):not(button[type=submit]), form .btn-group-vertical > button[type=submit]:not(:first-child),
+.btn-group-vertical > .btn:not(:first-child),
 .btn-group-vertical > .btn-group:not(:first-child) {
   margin-top: -1px;
 }
 
-.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), form .btn-group-vertical > button:not(:last-child):not(.dropdown-toggle):not(button[type=submit]), form .btn-group-vertical > button[type=submit]:not(:last-child):not(.dropdown-toggle),
-.btn-group-vertical > .btn-group:not(:last-child) > .btn,
-form .btn-group-vertical > .btn-group:not(:last-child) > button:not(button[type=submit]),
-form .btn-group-vertical > .btn-group:not(:last-child) > button[type=submit] {
+.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),
+.btn-group-vertical > .btn-group:not(:last-child) > .btn {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.btn-group-vertical > .btn ~ .btn, form .btn-group-vertical > button:not(button[type=submit]) ~ .btn, form .btn-group-vertical > .btn ~ button:not(button[type=submit]), form .btn-group-vertical > button:not(button[type=submit]) ~ button:not(button[type=submit]), form .btn-group-vertical > button[type=submit] ~ .btn, form .btn-group-vertical > button[type=submit] ~ button:not(button[type=submit]), form .btn-group-vertical > .btn ~ button[type=submit], form .btn-group-vertical > button:not(button[type=submit]) ~ button[type=submit], form .btn-group-vertical > button[type=submit] ~ button[type=submit],
-.btn-group-vertical > .btn-group:not(:first-child) > .btn,
-form .btn-group-vertical > .btn-group:not(:first-child) > button:not(button[type=submit]),
-form .btn-group-vertical > .btn-group:not(:first-child) > button[type=submit] {
+.btn-group-vertical > .btn ~ .btn,
+.btn-group-vertical > .btn-group:not(:first-child) > .btn {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
@@ -3991,7 +3911,7 @@ form .btn-group-vertical > .btn-group:not(:first-child) > button[type=submit] {
   padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
 }
 
-.navbar > .container, .navbar > body,
+.navbar > .container,
 .navbar > .container-fluid,
 .navbar > .container-sm,
 .navbar > .container-md,
@@ -4899,7 +4819,7 @@ form .btn-group-vertical > .btn-group:not(:first-child) > button[type=submit] {
   display: none;
 }
 
-.btn .badge, form button:not(button[type=submit]) .badge, form button[type=submit] .badge {
+.btn .badge {
   position: relative;
   top: -1px;
 }
@@ -5534,7 +5454,6 @@ form .btn-group-vertical > .btn-group:not(:first-child) > button[type=submit] {
   --bs-toast-zindex: 1090;
   position: absolute;
   z-index: var(--bs-toast-zindex);
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   max-width: 100%;
@@ -6179,7 +6098,6 @@ form .btn-group-vertical > .btn-group:not(:first-child) > button[type=submit] {
   float: left;
   width: 100%;
   margin-right: -100%;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   transition: transform 0.6s ease-in-out;
 }
@@ -6991,7 +6909,7 @@ form .btn-group-vertical > .btn-group:not(:first-child) > button[type=submit] {
   opacity: 0.5;
 }
 
-.placeholder.btn::before, form button.placeholder:not(button[type=submit])::before, form button.placeholder[type=submit]::before {
+.placeholder.btn::before {
   display: inline-block;
   content: "";
 }
@@ -7193,14 +7111,12 @@ form .btn-group-vertical > .btn-group:not(:first-child) > button[type=submit] {
 }
 
 .sticky-top {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1020;
 }
 
 .sticky-bottom {
-  position: -webkit-sticky;
   position: sticky;
   bottom: 0;
   z-index: 1020;
@@ -7208,13 +7124,11 @@ form .btn-group-vertical > .btn-group:not(:first-child) > button[type=submit] {
 
 @media (min-width: 576px) {
   .sticky-sm-top {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020;
   }
   .sticky-sm-bottom {
-    position: -webkit-sticky;
     position: sticky;
     bottom: 0;
     z-index: 1020;
@@ -7222,13 +7136,11 @@ form .btn-group-vertical > .btn-group:not(:first-child) > button[type=submit] {
 }
 @media (min-width: 768px) {
   .sticky-md-top {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020;
   }
   .sticky-md-bottom {
-    position: -webkit-sticky;
     position: sticky;
     bottom: 0;
     z-index: 1020;
@@ -7236,13 +7148,11 @@ form .btn-group-vertical > .btn-group:not(:first-child) > button[type=submit] {
 }
 @media (min-width: 992px) {
   .sticky-lg-top {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020;
   }
   .sticky-lg-bottom {
-    position: -webkit-sticky;
     position: sticky;
     bottom: 0;
     z-index: 1020;
@@ -7250,13 +7160,11 @@ form .btn-group-vertical > .btn-group:not(:first-child) > button[type=submit] {
 }
 @media (min-width: 1200px) {
   .sticky-xl-top {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020;
   }
   .sticky-xl-bottom {
-    position: -webkit-sticky;
     position: sticky;
     bottom: 0;
     z-index: 1020;
@@ -7264,13 +7172,11 @@ form .btn-group-vertical > .btn-group:not(:first-child) > button[type=submit] {
 }
 @media (min-width: 1400px) {
   .sticky-xxl-top {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020;
   }
   .sticky-xxl-bottom {
-    position: -webkit-sticky;
     position: sticky;
     bottom: 0;
     z-index: 1020;
@@ -7473,7 +7379,6 @@ form .btn-group-vertical > .btn-group:not(:first-child) > button[type=submit] {
 }
 
 .position-sticky {
-  position: -webkit-sticky !important;
   position: sticky !important;
 }
 
@@ -8172,7 +8077,7 @@ form .btn-group-vertical > .btn-group:not(:first-child) > button[type=submit] {
   padding-bottom: 0.25rem !important;
 }
 
-.py-2, form > div {
+.py-2 {
   padding-top: 0.5rem !important;
   padding-bottom: 0.5rem !important;
 }
@@ -8212,7 +8117,7 @@ form .btn-group-vertical > .btn-group:not(:first-child) > button[type=submit] {
   padding-top: 1.5rem !important;
 }
 
-.pt-5, header {
+.pt-5 {
   padding-top: 3rem !important;
 }
 
@@ -8252,7 +8157,7 @@ form .btn-group-vertical > .btn-group:not(:first-child) > button[type=submit] {
   padding-bottom: 0.5rem !important;
 }
 
-.pb-3, header {
+.pb-3 {
   padding-bottom: 1rem !important;
 }
 
@@ -8260,7 +8165,7 @@ form .btn-group-vertical > .btn-group:not(:first-child) > button[type=submit] {
   padding-bottom: 1.5rem !important;
 }
 
-.pb-5, nav, main, footer {
+.pb-5 {
   padding-bottom: 3rem !important;
 }
 
@@ -11230,6 +11135,9 @@ form .btn-group-vertical > .btn-group:not(:first-child) > button[type=submit] {
     display: none !important;
   }
 }
-/*# sourceMappingURL=bootstrap.css.map */
 
-/*# sourceMappingURL=styles.css.map */
+img {
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+}/*# sourceMappingURL=styles.css.map */

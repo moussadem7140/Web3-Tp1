@@ -1,0 +1,9 @@
+{% extends "base.jinja" %}
+{% block contenu %}
+  <h2 class="text-center my-5">Erreur {{code}}</h2>
+    <img src="/static/erreur.png" class="mx-auto d-block" alt="Image d'erreur">
+    <p class="text-center">{{message}}</p>
+    <div class="text-center">
+        <a href="/" class="btn btn-primary">Retour à l'accueil</a>
+    </div>
+{% endblock %}

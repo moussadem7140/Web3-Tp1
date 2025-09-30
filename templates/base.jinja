@@ -2,29 +2,41 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
 
 <head>
-    <title>Mythologie Grecque</title>
+    <title>Service particulier</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="/image/icon.png" />
+    <link rel="icon" href="/static/icon.png" />
     <link rel="stylesheet" href="/static/css/styles.css" />
 </head>
 
 <body>
-    <header class="row justify-between">
-        <h1>Mythologie Grecque</h1>
-        <img src="/image/logo.jpg" alt="Icone de la mythologie grecque" />
+    <header class="bg-primary text-white text-center">
+    <div class="container ">   
+        <div class="row justify-content-between"> 
+            <h1 class="py-3">Services particuliers</h1>
+            <div>langue_{{langue}}</div>
+        </div>     
+    </div>
     </header>
      <nav aria-label="Navigation" class="container navbar navbar-expand-md bg-body-tertiary sticky-top">
                 <div class="navbar-nav">
-                    <a class="text-primary fw-bold nav-link" href="index.html">Accueil</a>
-                    <a class="text-primary fw-bold nav-link" href="personnage.html">Service particulier</a>
-                    <a class="text-primary fw-bold nav-link" href="descriptionPersonnage.html">Liste des services</a>
+                    <a class="text-primary fw-bold nav-link" href="/">Accueil</a>
+                    <a class="text-primary fw-bold nav-link" href="/ajoutModif?action=ajout">Ajout d'un service</a>
+                    <a class="text-primary fw-bold nav-link" href="/liste_services">Liste des services</a>
+                    <a href="/langue_fr_CA" class="text-primary fw-bold nav-link">fr_CA</a>
+                    <a href="/langue_fr_FR" class="text-primary fw-bold nav-link">_fr_FR</a>
+                    <a href="/langue_en_CA" class="text-primary fw-bold nav-link">en_CA </a>
                 </div>
     </nav>
-    <main>
+    <main class="container">
         {% block contenu %}
         {% endblock %}
     </main>
+    <footer class="bg-primary text-center text-lg-start">
+        <div class="text-center p-3">
+            Moussa Dembélé © 2024 Copyright:
+            <a class="text-dark" href="https://cegep-garneau.qc.ca/">Cégep de Garneau</a>
+        </div>
 </body>
 
 </html>
